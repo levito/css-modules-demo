@@ -19,11 +19,3 @@ html {
 .sidebar {
   margin: 0 1rem;
 }
-
-.main {
-  flex: 2;
-}
-
-.sidebar {
-  flex: 1;
-}
