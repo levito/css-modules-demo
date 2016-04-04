@@ -6,32 +6,32 @@ var fs = require('fs');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
+  devServer: {
+    hot: true
+  },
 
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:8080',
-    // 'webpack/hot/dev-server',
+    'webpack/hot/only-dev-server',
     './src/app.js'
   ],
 
   output: {
-    filename: 'app.js',
-    path: path.resolve('./dist')
+    filename: 'app.js'
   },
 
   module: {
     loaders: [
       {
         test: /\.js$/,
-        // loaders: ['react-hot', 'babel'],
         loader: 'babel',
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
+        include: path.join(__dirname, 'src')
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css')
+        loaders: ['style', 'css?sourceMap'],
+        // loader: ExtractTextPlugin.extract('style', 'css?sourceMap'),
+        include: path.join(__dirname, 'src')
       }
     ]
   },
@@ -41,6 +41,8 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('app.css', { allChunks: true })
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    // new ExtractTextPlugin('app.css', { allChunks: true })
   ]
 };

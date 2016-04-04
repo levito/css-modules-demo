@@ -4,10 +4,6 @@ html {
   color: #357;
 }
 
-/*.headline {
-  text-align: center;
-}*/
-
 .container {
   display: flex;
   max-width: 1200px;
