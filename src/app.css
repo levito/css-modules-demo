@@ -4,9 +4,10 @@ html {
   color: #357;
 }
 
-/*.headline {
+.headline {
   text-align: center;
-}*/
+  font-family: Georgia, serif;
+}
 
 .container {
   display: flex;
@@ -15,7 +16,12 @@ html {
   background-color: #fff;
 }
 
-.main,
-.sidebar {
+#main,
+#sidebar,
+#sidebar2 {
   margin: 0 1rem;
+}
+
+a {
+  color: #c03;
 }

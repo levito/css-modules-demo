@@ -5,7 +5,7 @@ import './main.css';
 export default class Main extends Component {
   render () {
     return (
-      <div className="main">
+      <div id="main">
         <h2 className="headline">
           {this.props.headline}
         </h2>

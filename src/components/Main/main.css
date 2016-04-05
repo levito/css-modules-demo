@@ -1,3 +1,9 @@
-.main {
+#main {
   flex: 2;
+}
+
+#main .headline {
+  text-align: left;
+  font-style: italic;
+  color: #c03;
 }

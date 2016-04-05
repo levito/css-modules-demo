@@ -1,3 +1,11 @@
-.sidebar {
+#sidebar,
+#sidebar2 {
   flex: 1;
+}
+
+#sidebar .headline,
+#sidebar2 .headline {
+  text-align: left;
+  font-style: italic;
+  color: #c03;
 }

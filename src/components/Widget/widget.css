@@ -3,3 +3,10 @@
   border: 1px solid;
   padding: 0 1rem;
 }
+
+.widget .headline {
+  font-family: inherit !important;
+  font-style: normal !important;
+  font-weight: bold;
+  color: inherit !important;
+}
