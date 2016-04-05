@@ -1,3 +1,7 @@
+:root {
+  --accent-color: #c03;
+}
+
 html {
   font: 20px/1.5 nornal normal normal Arial, Helvetica, sans-serif;
   background-color: #dde6ee;
@@ -5,7 +9,7 @@ html {
 }
 
 a {
-  color: #c03;
+  color: var(--accent-color);
 }
 
 :global .container {
@@ -26,7 +30,7 @@ a {
 .columnHeadline {
   composes: serif;
   font-style: italic;
-  color: #c03;
+  color: var(--accent-color);
 }
 
 .headline {

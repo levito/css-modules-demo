@@ -29,12 +29,16 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css?modules&importLoaders=1&sourceMap'],
-        // loader: ExtractTextPlugin.extract('style', 'css?sourceMap'),
+        loaders: ['style', 'css?modules&importLoaders=1!postcss?sourceMap'],
+        // loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1!postcss?sourceMap'),
         include: path.join(__dirname, 'src')
       }
     ]
   },
+
+  postcss: [
+    require('postcss-cssnext')
+  ],
 
   resolve: {
     modulesDirectories: ['node_modules', 'components']
