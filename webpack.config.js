@@ -29,8 +29,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css?modules&importLoaders=1!postcss?sourceMap'],
-        // loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1!postcss?sourceMap'),
+        loaders: ['style', 'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap!postcss?sourceMap'],
+        // loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap!postcss?sourceMap'),
         include: path.join(__dirname, 'src')
       }
     ]
