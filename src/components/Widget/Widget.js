@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 
-import './widget.css';
+import styles from './widget.css';
 
 export default class Widget extends Component {
   render () {
     return (
-      <div className="widget">
-        <h3 className="headline">
+      <div className={styles.widget}>
+        <h3 className={styles.headline}>
           {this.props.headline}
         </h3>
         {this.props.children}

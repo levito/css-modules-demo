@@ -1,3 +1,8 @@
 .main {
+  composes: column from '../../app.css';
   flex: 2;
+}
+
+.headline {
+  composes: columnHeadline from '../../app.css';
 }

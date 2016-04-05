@@ -29,7 +29,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css?sourceMap'],
+        loaders: ['style', 'css?modules&importLoaders=1&sourceMap'],
         // loader: ExtractTextPlugin.extract('style', 'css?sourceMap'),
         include: path.join(__dirname, 'src')
       }

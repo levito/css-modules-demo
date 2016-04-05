@@ -4,14 +4,32 @@ html {
   color: #357;
 }
 
-.container {
+a {
+  color: #c03;
+}
+
+:global .container {
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
 }
 
-.main,
-.sidebar {
+.column {
   margin: 0 1rem;
+}
+
+.serif {
+  font-family: Georgia, serif;
+}
+
+.columnHeadline {
+  composes: serif;
+  font-style: italic;
+  color: #c03;
+}
+
+.headline {
+  composes: serif;
+  text-align: center;
 }
