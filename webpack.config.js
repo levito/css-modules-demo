@@ -29,8 +29,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css?modules&localIdentName=[name]__[local]&sourceMap'],
-        // loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]__[local]&sourceMap'),
+        loaders: [
+          'style',
+          'css?modules&localIdentName=[name]__[local]&sourceMap'
+        ],
+        // loader: ExtractTextPlugin.extract(
+        //   'style',
+        //   'css?modules&localIdentName=[name]__[local]&sourceMap'
+        // ),
         include: path.join(__dirname, 'src')
       }
     ]
