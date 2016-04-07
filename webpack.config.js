@@ -29,8 +29,18 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap!postcss?sourceMap'],
-        // loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap!postcss?sourceMap'),
+        loaders: [
+          'style',
+          'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap',
+          'postcss?sourceMap'
+        ],
+        // loader: ExtractTextPlugin.extract(
+        //   'style',
+        //   [
+        //     'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap',
+        //     'postcss?sourceMap'
+        //   ].join('!')
+        // ),
         include: path.join(__dirname, 'src')
       }
     ]
