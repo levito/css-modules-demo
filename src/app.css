@@ -25,3 +25,38 @@ html {
 a {
   color: #c03;
 }
+
+#main {
+  flex: 2;
+}
+
+#main .headline {
+  text-align: left;
+  font-style: italic;
+  color: #c03;
+}
+
+#sidebar,
+#sidebar2 {
+  flex: 1;
+}
+
+#sidebar .headline,
+#sidebar2 .headline {
+  text-align: left;
+  font-style: italic;
+  color: #c03;
+}
+
+.widget {
+  margin: 1rem 0;
+  border: 1px solid;
+  padding: 0 1rem;
+}
+
+.widget .headline {
+  font-family: inherit !important;
+  font-style: normal !important;
+  font-weight: bold;
+  color: inherit !important;
+}
