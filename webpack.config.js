@@ -29,18 +29,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: [
+        loader: process.env.NODE_ENV === 'development' ? [
           'style',
           'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap',
           'postcss?sourceMap'
-        ],
-        // loader: ExtractTextPlugin.extract(
-        //   'style',
-        //   [
-        //     'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap',
-        //     'postcss?sourceMap'
-        //   ].join('!')
-        // ),
+        ].join('!') : ExtractTextPlugin.extract(
+          'style',
+          [
+            'css?modules&importLoaders=1&localIdentName=[hash:base64:8]&sourceMap',
+            'postcss?sourceMap'
+          ].join('!')
+        ),
         include: path.join(__dirname, 'src')
       }
     ]
@@ -57,6 +56,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    // new ExtractTextPlugin('app.css', { allChunks: true })
+    new ExtractTextPlugin('app.css', { allChunks: true })
   ]
 };
